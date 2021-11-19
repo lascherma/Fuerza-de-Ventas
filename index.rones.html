@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta charset="UTF-8">
+  <title>DISTRIBOCA C.A.</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="item">
+      <img src="images/mantuano.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Diplomático Mantuano</h3>
+        <p align="justify">Está compuesto por una mezcla extraordinaria de rones envejecidos hasta por 8 años. Goza de un magnífico balance y de un sabor ideal para mezclar en cocteles, aun cuando su cuerpo y complejidad también lo hacen atractivo para aquellos que prefieren tomarlo puro.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">40° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">0.70 L</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="images/reserva exclusiva.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Diplomático Reserva Exclusiva</h3>
+        <p align="justify">Es un elegante y complejo ron de degustación, envejecido hasta 12 años. Gracias a su cuerpo único y excelente equilibrio, se ha convertido en una referencia para los amantes y conocedores de ron en todo el mundo.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">40° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">0.70 / 0.35 L</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="images/ambassador.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Diplomático Ambassador</h3>
+        <p align="justify">Exquisito ron elaborado a partir de las mejores reservas de la destilería (100% rones de alambiques de cobre) y envejecido en barricas de roble blanco por un mínimo de 12 años hasta lograr la madurez óptima. Luego, se envejece por dos años adicionales en barricas de sherry Pedro Ximénez, contribuyendo al  complejo perfil sensorial. Diplomático Ambassador se embotella directamente desde la barrica, con el fin de preservar la plena expresión de sus propiedades organolépticas.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">47° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">0.70 L</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="images/single vintage.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Diplomático Single Vintage</h3>
+        <p align="justify">Single Vintage, nace de la mezcla perfecta del año específico de su etiqueta. Destilado en alambiques de cobre, envejecido en barricas de roble blanco americano y terminado 1 año en barricas de sherry Oloroso, dan paso a un ron de añada presentado en una edición limitada a 43° G.L. Con una condición sensorial irrepetible, este exquisito ron cautivará los paladares más exigentes.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">43° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">0.75 L</p>
+      </div>
+    </div>
+    
+    
+    <div class="item">
+      <img src="images/planas.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Diplomático Planas</h3>
+        <p align="justify">Es una mezcla extraordinaria de rones destilados en alambiques, columnas y batch kettle. Añejado hasta seis años, es elegante, rico y sorprendentemente intenso para un ron blanco. Un complejo proceso de filtración de carbón llevado a cabo antes de su embotellado, le otorga a este ron su apariencia cristalina y suave acabado.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">47° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">0.70 L</p>
+      </div>
+    </div>
+
+     <div class="inputfield">
+        <a href="index.portafolio.html"><input type="button" value="Regresar a Listado" class="btn"></a>
+      </div>
+  
+</body>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+  
+  *{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.425)), url("img/fondo1.png") no-repeat center/cover;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+
+
+.item{
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+  
+  transition: all 300ms;
+  
+  position: relative;
+}
+
+
+.item::after {
+  content: "";
+  background-color: rgba(179, 229, 252, .1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  transform: scale(0);
+  transition: all 300ms;
+  opacity: 0;
+}
+
+.item:hover:after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item-text{
+  padding: 1em;
+}
+
+
+.item-img{
+  max-width: 100%;
+  display: block;
+}
+
+p{
+  font-weight: 600;
+}
+
+.inputfield .btn{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: 700; 
+  border: 0px;
+  background:  #0000FF;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+@media screen and (min-width: 590px) {
+  
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+
+
+@media screen and (min-width: 960px) {
+  
+  .container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+</style>
+</html>

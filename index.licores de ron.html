@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta charset="UTF-8">
+  <title>DISTRIBOCA C.A.</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="item">
+      <img src="images/canaima.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3></h3>
+        <p align="justify">Elaborado con alcoholes destilados en alambiques de cobre. Calidad avalada por la tradición de excelencia DUSA. Bebida jovial que impulsa el despertar de un espíritu aventurero en el consumidor y seduce con el encanto natural de su exótico sabor. Ofreciendo dos presentaciones: Dorado y blanco.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">40° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">Dorado 0.70 L / 1 L</p>
+        <p align="justify">Blanco 0.70 L</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="images/cinco estrella.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Cinco Estrella</h3>
+        <p align="justify">Elaborado con finos alcoholes provenientes de la caña de azúcar. Con aromas de madera, ligeramente afrutados. En boca presenta notas frescas de caña y dulzor a frutas secas. Sus dos presentaciones dorado y blanco lo hace la mejor opción en el segmento de licores de ron del mercado. Consumir solo con hielo, gaseosa o mezclado. Perfecto para coctelería.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">35° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">Dorado 0,35 L 0,70 L / 1 L / 1,75 L</p>
+        <p align="justify">Blanco 0,70 L / 1 L</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="images/kañadorado.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Kañadorado</h3>
+        <p align="justify">Bebida parrandera que impulsa el despertar de un espíritu irreverente y aventurero en el consumidor y seduce con el encanto natural de su exótico sabor. El color ámbar intenso y traslúcido de Kañadorado acompaña perfectamente sus notas suaves de madera y notas avainilladas. Su sabor es fresco y dulce, ligeramente ahumado y afrutado.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">35° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">1 L</p>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="images/naiguata.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Naiguatá Coconut Rum</h3>
+        <p align="justify">Elaborado con finos rones añejos combinados con el sabor caribeño del coco, proveniente de una cuidadosa selección de esencias naturales de este aromático fruto. Es un licor elaborado con los más finos rones añejos combinados con el sabor caribeño del coco, proveniente de una cuidadosa selección de esencias naturales de este aromático fruto. Ideal para consumir solo con hielo o combinarlo con jugos de frutas. Perfecto para coctelería creativa.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">25° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">0.70</p>
+      </div>
+    </div>
+    
+    
+    <div class="item">
+      <img src="images/rumbaron.dusa.png" alt="" class="item-img">
+      <div class="item-text">
+        <h3>Rumbaron</h3>
+        <p align="justify">Es un licor seco a base de ron, resultado de la mezcla de destilados jóvenes macerados con roble y rones añejos únicos. Con un cuerpo balanceado y redondez perfecta, es el producto perfecto para quienes dan inicio a bebidas destiladas. Se puede tomar puro, en las rocas o mezclado con bebida gaseosa sabor a cola o limón.</p>
+        <h3>Grado Alcoholico</h3>
+        <p align="justify">30° G.L</p>
+        <h3>Contenido</h3>
+        <p align="justify">0.98</p>
+      </div>
+    </div>
+
+     <div class="inputfield">
+        <a href="index.portafolio.html"><input type="button" value="Regresar a Listado" class="btn"></a>
+      </div>
+  
+</body>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+  
+  *{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.425)), url("img/fondo1.png") no-repeat center/cover;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+
+
+.item{
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+  
+  transition: all 300ms;
+  
+  position: relative;
+}
+
+
+.item::after {
+  content: "";
+  background-color: rgba(179, 229, 252, .1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  transform: scale(0);
+  transition: all 300ms;
+  opacity: 0;
+}
+
+.item:hover:after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item-text{
+  padding: 1em;
+}
+
+
+.item-img{
+  max-width: 100%;
+  display: block;
+}
+
+p{
+  font-weight: 600;
+}
+
+.inputfield .btn{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-weight: 700; 
+  border: 0px;
+  background:  #0000FF;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+@media screen and (min-width: 590px) {
+  
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+
+
+@media screen and (min-width: 960px) {
+  
+  .container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+</style>
+</html>

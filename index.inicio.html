@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISTRIBOCA C.A.</title>
+</head>
+<body> 
+<section>
+        <div class="container">
+            <div class="grid">
+                <div class="left">
+                    <img src="img/fuerza de ventas.png">
+                </div>
+                <div class="right">
+                    <h4>Bienvenido !</h4>
+                    <h2>FUERZA DE VENTAS</h2>
+                    <h3 align="justify">"Haz sólo lo que amas y serás feliz, y el que hace lo que ama, está benditamente condenado al éxito, que llegará cuando deba llegar, porque lo que debe ser... será y llegará naturalmente."</h3>
+                    <p><font size="3px">-Facundo Cabral-</font></p>
+                    <a href="index.menu.html" class="btn">Iniciar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'Quicksand', sans-serif;
+}
+:root{
+    --color:#0101DF;
+}
+
+html{
+    font-size: 90%;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.425)), url("img/fondo.png") no-repeat center/cover;
+    color: #fff;
+}
+.container{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.left img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 6px;
+}
+.right > *{
+    margin-bottom: 1.1rem;
+    color: #fff;
+}
+.right h4{
+    font-weight: 700;
+    background: var(--color);
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+.right h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.right p{
+    text-align: justify;
+}
+p{
+    font-weight: 700;
+}
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+}
+.btn::after{
+    content: "";
+    background: var(--color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: width .5s ease;
+}
+.btn:hover::after{
+    width: 100%;
+}
+@media (max-width:768px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</body>
+</html>

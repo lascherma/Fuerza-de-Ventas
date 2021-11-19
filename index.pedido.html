@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>DISTRIBOCA C.A.</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/gh/codeOpacity/op_icons@main/op_icons.all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rehanur.github.io/me/opacity.max.css">
+    <!--End Here-->
+
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<script>
+
+  var idVendedor;
+  var idCodigo; 
+  var idMetodo;
+  var nombreProducto;
+  var contenidoProducto;
+  var unidadProducto;
+  var precio;
+  var cantidad;
+  var total;
+  var subtotal;
+  var p=0;
+  var iva;
+  var subtotalP=0;
+  var fecha= new Date();
+  var imprimir;
+  var numero_Factura=0;
+
+
+function generarFactura(){
+
+  
+idVendedor=document.getElementById("idVendedor").value;
+idCodigo=document.getElementById("idCodigo").value;
+idMetodo=document.getElementById("idMetodo").value;
+
+document.write("<h3>DISTRIBOCA C.A. ***FUERZA DE VENTAS***</h3>");
+document.write("<strong>Fecha: </strong>"+fecha.getDate() + "/" + (fecha.getMonth()+1) + "/" + fecha.getFullYear()+"</br>"+"</br>");
+document.write("<strong>Vendedor: </strong>"+'&nbsp;'+idVendedor+"<br>"+"<br>");
+document.write("<strong>Código / Cliente: </strong>"+'&nbsp;'+idCodigo+"<br>"+"<br>");
+document.write("<strong>Método de Pagó: </strong>"+'&nbsp;'+idMetodo+"<br>"+"<br>");
+
+  
+  
+for (subtotal=0; nombreProducto != "*"; subtotal++) {
+
+document.write("<h3>*****PRODUCTO*****</h3>");
+nombreProducto=prompt('Ingrese Nombre del Producto');
+document.write("<strong>Producto: </strong>"+'&nbsp;'+nombreProducto+'&nbsp;'+'&nbsp;');
+
+contenidoProducto=parseFloat(prompt('Ingrese el Contenido del Producto'));
+document.write("<strong>Contenido: </strong>",contenidoProducto.toFixed(2)+'&nbsp;');
+
+unidadProducto=prompt('Ingrese la Unidad del Producto');
+document.write("<strong>Unidad: </strong>"+'&nbsp;'+unidadProducto+'&nbsp;'+'&nbsp;');
+
+cantidad=parseInt(prompt('Ingrese la Cantidad'));
+document.write("<strong>Cantidad: </strong>"+'&nbsp;'+cantidad+"<br>"+"<br>");
+
+
+
+
+
+nombreProducto=prompt('Ingrese "*" Para terminar o cualquier tecla para continuar');
+
+subtotal=precio*cantidad;
+subtotalP=subtotalP+parseInt(subtotal);
+iva=subtotalP*0.19;
+total=subtotalP+iva;  
+
+} 
+document.write('<button onclick="window.print()">Guardar & Imprimir</button><br><br>');
+
+document.write('<button><a href="index.pedido.html"><input type="button" value="«"></a></button>');
+
+}
+
+generarFactura()
+
+
+</script>
+<body>
+
+    <div class="container-boton">
+        <a href="https://wa.me/584245077956?text=Fuerza%20de%20Ventas%20" target="_blank">
+            <img class="boton" src="img/boton-1.png" alt="">
+        </a>
+    </div>
+
+    <input type="checkbox" id="btn-modal">
+    <label for="btn-modal" class="lbl-modal">Pedido</label>
+
+    <div class="modal">
+        <div class="contenedor">
+            <header>Pedido</header>
+            <label for="btn-modal">X</label>
+            <div class="contenido">
+
+            <form name="formulario1" action="#">
+            <img src="img/logo.png" class="imgLogo"/>
+
+            <select id="idVendedor" name="idVendedor" class="input">
+              <option value="Seleccione">Vendedor</option>
+              <option value="XXXXXXXXXX">XXXXXXXXXX</option>
+              <option value="XXXXXXXXXX">XXXXXXXXXX</option>
+            </select><br><br>
+
+            <select name="cosa" onchange="cambia()" class="input">
+            <option value="0">Cliente
+              <option value="C1822">EL BODEGÓN DE MONCHO J&L C.A.
+              <option value="C926">BODEGÓN COSTA AZUL C.A.
+              <option value="3">Software
+              <option value="4">Marcas
+            </select><br><br>
+
+           <select id="idCodigo" name="opt" class="input">
+            <option value="Código">Código
+           </select><br><br>
+
+           <select id="idMetodo" name="idMetodo" class="input">
+             <option value="Método de Pagó">Método de Pagó</option>
+             <option value="Crédito">Crédito</option>
+             <option value="Contado">Contado</option>
+           </select><br><br>
+
+           <input class="input" type="button"  name="Continuar" onclick="generarFactura()"   value="Continuar"/><br><br>
+
+           <a href="index.menu.html"><input type="button" value="menu" class="input"></a>
+
+            </form>
+             
+            </div>
+        </div>
+    </div>
+</body>
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+/*Còdigos universales de la pàgina*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+/*Còdigo opcional - Fondo de la pàgina*/
+body{
+      background: linear-gradient(rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.425)),url("img/fondo-5.png") no-repeat center/cover; color: #fff;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;;
+}
+/*---*/
+body, .modal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-modal:checked ~ .modal{
+    opacity: 1;
+    visibility: visible;
+} 
+.contenedor{
+    width: 400px;
+    height: 630px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    transition: all 500ms ease;
+    position: relative;
+    font-weight: 700;
+    transform: translateY(-30%);
+}
+#btn-modal:checked ~ .modal .contenedor{
+    transform: translateY(0%);
+}
+
+.btn {
+    width: 98%;
+    height: 40px;
+    margin: 5px;
+    background: #0101DF;
+    border-radius: 4px;
+    font-weight: 700;
+} 
+.contenedor header{
+    padding: 10px;
+    background: #0101df;
+    color: #fff;
+    font-weight: 800;
+}
+.contenedor label{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.contenido{
+    width: 100%;
+    padding: 10px; 
+}
+.contenido h3{
+    margin-bottom: 10px;
+}
+.contenido p{
+    margin-bottom: 7px;
+}
+#btn-modal{
+    display: none;
+}
+.lbl-modal{
+    background: #0101df;
+    font-weight: 700;
+    padding: 15px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .contenedor{
+        width: 95%;
+    }
+}
+
+
+/*whatsapp*/
+
+.container-boton{
+    background-color: #fff;
+    border: 5px solid gray;
+    position: fixed;
+    z-index: 999;
+    border-radius: 10%;
+    bottom: 70px;
+    right: 25px;
+    padding: 13px;
+    transition: ease 0.3s;
+    animation: efecto 1.2s infinite;
+    width: 120px;
+    height: 60px;
+}
+
+
+.container-boton:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.boton{
+    width: 80px;
+    transition: ease 1s;
+}
+
+@keyframes efecto{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    100%{
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+}
+
+/*logo*/
+
+.imgLogo {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  /*border: 1px solid rgba(109, 86, 10, 0.7);*/
+}
+
+/*input*/
+
+.input{
+  width: 100%;
+  height: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.20);
+}
+
+h6{
+    color: black;
+    font-weight: 700;
+}
+
+</style>
+</html>
